@@ -2,62 +2,86 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 
-@media screen and (max-width:960px) {
-
-    .item img{
-        height: 50vh;
-    }
-    .item .item-body h3 {
-        font-size: 20px;
-        color: forestgreen;
-    }
-    .item .item-body p {
-        font-size: 15px;
-        color: deeppink;
-    }
- .owl-carousel {    
-        height: 50vh;
-    }
-    .card4 a {
-        display: none;
-    }
-    .owl-carousel, .item {
+/* media queries */
+@media screen and (max-width:1024px) {
+    
+    .carousel-container .item img{
         height: 50vh;
     }
     .carousel-container .owl-carousel{
         height: 50vh;
     }
-    .item .item-body {
+    .carousel-container .owl-carousel .item-body {
         position: absolute;
         bottom: 35px;
         left: 0;
         right: 0;
         text-align: center;
-        top: 30%;
+        top: 25%;
         bottom: auto;
     }
-    .item .item-body .btn {
-        font-size: small;
+
+    .carousel-container .owl-carousel .item-body h3 {
+        font-size: 35px;
+        font-weight: bold;
+        margin: 0;
+        color: forestgreen;
     }
+    .carousel-container .owl-carousel .item-body p {
+        font-size: 18px;
+    }
+
+    .carousel-container .owl-carousel .item-body .btn-outline-light {
+        font-size: 15px;
+    }
+    .about-paragraph {
+        margin-top: 1rem;
+    }
+
+    .no-border {
+        margin-bottom: 1rem;
+    }
+
+    .org-img {
+        padding-left: 90%;
+    }
+
     .vision-card {
-        padding: 0 2rem 1rem 2rem;
+        margin-bottom: 1rem;
+        min-height: 100px;
     }
-    .service-section {
-        padding-bottom: 2rem;
-    }
-    
 }
-.card {
-    border: none;
+
+@media (min-width:576px) {
+    #services .transform-on-hover:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+    } 
+
 }
+
+
+h1 {
+    color: forestgreen;
+    text-align: center;
+    font-size: 70px;
+}
+p {
+    font-size: 18px;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 html, body {
     font-family: 'PT Sans', sans-serif;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
 }
 
+/* carousel start */
 .owl-prev {
     left: 10px;
 }
@@ -76,7 +100,9 @@ html, body {
     font-size: 60px;
     color: deepskyblue;
 }
-.owl-prev:hover, .owl-prev:active, .owl-prev:focus, .owl-next:hover, .owl-next:active, .owl-next:focus {outline: 0;}
+.owl-prev:hover, .owl-prev:active, .owl-prev:focus, .owl-next:hover, .owl-next:active, .owl-next:focus {
+    outline: 0;
+}
 .owl-prev span , .owl-next span {
     font-size: 60px;
     color: deepskyblue;
@@ -106,13 +132,13 @@ html, body {
     bottom: auto;
 }
 .item-body h3{
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
     margin: 0;
     color: forestgreen;
 } 
 .item-body p {
-    font-size: 30px; 
+    font-size: 35px; 
     font-weight: bold;
     margin: 0;
     color: deepskyblue
@@ -127,21 +153,53 @@ html, body {
     width: 100;
 }
 
+#home .btn-outline-light {
+    color: deepskyblue;
+}
+
+/* carousel end */
+
 /* vision & mission section */
-#mission {
-    background-color: gainsboro;
-}
-.vision-card {
-    padding:rem;
-    border: none; 
-    border-radius: 0px 30px 0px 30px;
-    /* box-shadow: -webkit-box-shadow: -19px 19px 43px 0px rgba(0, 0, 0, .61); */
-    /* -moz-box-shadow: -19px 19px 43px 0px rgba(0, 0, 0, .61); */
-    box-shadow: -5px 10px 33px 0px rgba(0, 0, 0, .61);
-}
-.vision-card i {
+.vision-heading {
+    font-size: 28px;
     color: forestgreen;
-    size: 2rem;
+    text-align: center;
+}
+#services .card {
+    transition: 0.4s ease;
+}
+
+#services .card img {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+ .vision-card {
+    min-height: 400px;
+    border: none !important; 
+    text-align: center;
+    border-radius: 0px 30px 0px 30px !important;
+    -moz-box-shadow: -19px 19px 43px 0px rgba(34, 139, 34, .61);
+    box-shadow: -19px 19px 43px 0px rgba(34, 139, 34, .61);
+}
+ .vision-card .fa-compass, .vision-card .fa-globe, .vision-card .fa-diamond {
+    color: forestgreen;
+    font-size: 60px;
+    margin-top: 25px;
+}
+.vision-card .fa-check {
+    color: forestgreen;
+    font-size: 20px;
+}
+.vision-card li {
+    list-style: none;
+}
+
+.vision-card {
+    background-color: rgba(0, 191, 255, 0.7);
+    transition: 1s;
+}
+.vision-card:hover {
+    background-color: rgba(0, 191, 255, 0.5);
+    transition: 1s;
 }
  .card-title {
      font-size: 2rem;
@@ -158,18 +216,30 @@ html, body {
 }
 
 /* navbar nav start */
+/* .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active 
+    a:focus, .navbar-inverse .navbar-nav .active a:hover {
+    color: whitesmoke;
+    background-color: deepskyblue;
+} */
+
 .my-nav {
-    /* background-color: rgba(0, 100, 240, 0.9); */
-    background-color: rgba(34, 139, 34, 0.8); ;
+    background-color: rgba(0, 0, 0, 1) !important;
+    /* background-color: rgba(34, 139, 34, 0.8);  */
+    /* background-color: cornsilk; */
+}
+
+.my-nav .nav-link {
+    color: deepskyblue;
+    font-size: 18px;
 }
 .my-nav a {
     color: deepskyblue;
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
     padding: 2px;
 }
 
 .my-nav .nav-link:hover {
-    color: deeppink;
+    color: forestgreen;
 }
 #navicon {
     color: deepskyblue;
@@ -179,6 +249,11 @@ html, body {
 /* services start */
 #services .service-title {
     font-size: 1.2rem;
+}
+
+#services .card {
+    margin-bottom: 1rem;
+    min-height: 307px;
 }
 /* services end */
 
@@ -191,18 +266,27 @@ html, body {
     background-color: transparent;
 }
 .card4 {
-    background-color: transparent;
-    border: solid 2px red;
+    /* background-color: red; */
     margin-bottom: 2rem;
+    min-height: 300px;
+    border-radius: 20px;
 }
-.why-we-best p{
-    text-align: center;
-    font-size: 3rem;
+
+.best-heading {
+    font-size: 28px;
     color: forestgreen;
-}
-.why-we-best .card-title{
-    font-size: 1.5rem;
     text-align: center;
+}
+
+.why-we-best .card-title{
+    font-size: 25px;
+    text-align: center;
+}
+
+.why-we-best .card-text{
+    font-size: 18px;
+    text-align: center;
+    color: #767676;
 }
 
 .blue-text {
@@ -211,25 +295,136 @@ html, body {
  .card4 .card-title {
     color: deepskyblue;
 }
-.card4 .card-text {
+/* .card4 .card-text {
     columns: #191919;
+    font-size: 18px;
+} */
+/* why we best end */
+
+/* management start */
+.management-heading {
+    font-size: 28px;
+    text-align: center;
+    color: forestgreen;
+}
+
+.management-paragraph {
+    font-size: 18px;
+    color: #fff;
+}
+
+.management {
+    background-color: #00a8ff;
+}
+
+
+/* Management end */
+
+/* Organization structure start */
+ .org-img{
+    padding-left: 29%;
+}
+.org-heading {
+    font-size: 28px;
+    color: forestgreen;
+}
+/* Organization structure end */
+
+/* Our people start */
+.our-people-heading {
+    font-size: 28px;
+    color: forestgreen;
+    text-align: center;
+}
+
+.our-people-paragraph {
+    color: #fff;
     font-size: 18px;
 }
 
-.card4 {
-    background-color: transparent;
+.our-people {
+    background: url(/imgs/close-up-workers-with-briefcases_1098-3096.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
-/* why we best end */
+
+/* Our people end */
 
 /* About */
 #about {
     top: 3rem;
 }
 #about p {
-    font-size: 1.4rem;
+    font-size: 18px;
+}
+.bg-gray {
+    background-color: #f0f0f0;
+}
+.about-heading {
+    font-size: 28px;
+    text-align: center;
+    color: forestgreen;
+}
+.about-paragraph {
+    color: #767676;
+    font-size: 18px;
+}
+.about-img {
+    border-radius: 0px 30px 0px 30px;
+}
+.about ul li {
+    list-style: none;
+    color: #767676;
+    font-size: 18px;
+    padding: 1px;
 }
 
+.about .fa-star {
+    padding: 3px;
+}
+
+/* about end */
+
+/* history & philosophy start */
+#history ul li {
+    font-size: 18px;
+    list-style: none;
+    color: #fff;
+}
+.history-heading {
+    font-size: 28px;
+    text-align: center;
+    color: forestgreen;
+}
+
+.history-paragraph {
+    color: #f3f3f3;
+    font-size: 18px;
+}
+
+.history-list {
+    color: #f9f9f9;
+    font-size: 18px;
+    list-style: none;
+}
+#history {
+    background: url(/imgs/close-up-security-equipment_23-2148403996.jpg) ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: transparent;
+}
+
+/* history & philosophy end */
+
  /* Contact */
+ .contact-heading {
+     font-size: 28px;
+     color: forestgreen;
+     text-align: center;
+ }
 #section-blue-line{
     width: 20%;
     background-color: deepskyblue;
@@ -263,8 +458,9 @@ footer {
     padding-right: 1.2rem;
 }
 .footer-bottom .fa-heart {
-    color: crimson;
+    color: deepskyblue;
 }
+
 
 
 
