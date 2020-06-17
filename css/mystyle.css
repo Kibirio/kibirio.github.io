@@ -2,63 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 
-/* media queries */
-@media screen and (max-width:1024px) {
-    
-    .carousel-container .item img{
-        height: 50vh;
-    }
-    .carousel-container .owl-carousel{
-        height: 50vh;
-    }
-    .carousel-container .owl-carousel .item-body {
-        position: absolute;
-        bottom: 35px;
-        left: 0;
-        right: 0;
-        text-align: center;
-        top: 25%;
-        bottom: auto;
-    }
 
-    .carousel-container .owl-carousel .item-body h3 {
-        font-size: 35px;
-        font-weight: bold;
-        margin: 0;
-        color: forestgreen;
-    }
-    .carousel-container .owl-carousel .item-body p {
-        font-size: 18px;
-    }
-
-    .carousel-container .owl-carousel .item-body .btn-outline-light {
-        font-size: 15px;
-    }
-    .about-paragraph {
-        margin-top: 1rem;
-    }
-
-    .no-border {
-        margin-bottom: 1rem;
-    }
-
-    .org-img {
-        padding-left: 90%;
-    }
-
-    .vision-card {
-        margin-bottom: 1rem;
-        min-height: 100px;
-    }
-}
-
-@media (min-width:576px) {
-    #services .transform-on-hover:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
-    } 
-
-}
 
 
 h1 {
@@ -130,6 +74,7 @@ html, body {
     text-align: center;
     top: 35%;
     bottom: auto;
+    /* z-index: 3; */
 }
 .item-body h3{
     font-size: 70px;
@@ -141,10 +86,11 @@ html, body {
     font-size: 35px; 
     font-weight: bold;
     margin: 0;
-    color: deepskyblue
+    color: forestgreen;
 }
 .owl-carousel, .item {
     height: 87vh;
+    z-index: 3;
 }
 .carousel-container{
     margin-top: 4.3rem;
@@ -156,7 +102,18 @@ html, body {
 #home .btn-outline-light {
     color: deepskyblue;
 }
+#home img {
+    opacity: 0.5;
+}
 
+.overlay {
+    /* height: 100vh; */
+    width: 100vw;
+    position: absolute;
+    background: deepskyblue;
+    z-index: 1;
+    opacity: 0.8;
+}
 /* carousel end */
 
 /* vision & mission section */
@@ -203,7 +160,6 @@ html, body {
 }
  .card-title {
      font-size: 2rem;
-    font-weight: bold;
     color: deepskyblue;
 }
 .card-text {
@@ -258,17 +214,36 @@ html, body {
 /* services end */
 
 /* why we best start */
+
+#choose-us .card4 .fa{
+    font-size: 35px;
+    margin-left: 100px;
+    color: forestgreen;
+}
+
+#choose-us .card6 .fa{
+    font-size: 35px;
+    margin-left: 190px;
+    color: forestgreen;
+}
 .why-we-best {
     background: url(/imgs/smartmockups_kb2151u1.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center;
     background-color: transparent;
+    position: relative;
+    background-repeat: no-repeat;
 }
 .card4 {
-    /* background-color: red; */
+    height: 300px;
     margin-bottom: 2rem;
-    min-height: 300px;
+    border-radius: 20px;
+}
+
+.card6 {
+    height: 300px;
+    margin-bottom: 2rem;
     border-radius: 20px;
 }
 
@@ -346,8 +321,11 @@ html, body {
     background: url(/imgs/close-up-workers-with-briefcases_1098-3096.jpg);
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; 
     background-repeat: no-repeat;
+    position: relative;
+    opacity: 0.7;
+    min-height: 400px;
 }
 
 /* Our people end */
@@ -461,6 +439,107 @@ footer {
     color: deepskyblue;
 }
 
+/* media queries */
+@media screen and (min-width:700px) {
+    #choose-us .card4 .fa{
+        font-size: 35px;
+        margin-left: 50px;
+        color: forestgreen;
+    }
+    
+    #choose-us .card6 .fa{
+        font-size: 35px;
+        margin-left: 140px;
+        color: forestgreen;
+    }
+    .card4 {
+        height: 425px;
+        margin-bottom: 2rem;
+        border-radius: 20px;
+    }
+
+    .card6 {
+        height: 300px;
+        margin-bottom: 2rem;
+        border-radius: 20px;
+    }
+    .vision-card {
+        height: 365px;
+    }
+    .org-structure .org-img {
+        position: relative;
+        padding-left: 100px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    
+    .carousel-container .item img{
+        height: 50vh;
+    }
+    .carousel-container .owl-carousel{
+        height: 50vh;
+    }
+    .carousel-container .owl-carousel .item-body {
+        position: absolute;
+        bottom: 35px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 25%;
+        bottom: auto;
+    }
+
+    .carousel-container .owl-carousel .item-body h3 {
+        font-size: 35px;
+        font-weight: bold;
+        margin: 0;
+        color: forestgreen;
+    }
+    .carousel-container .owl-carousel .item-body p {
+        font-size: 18px;
+    }
+
+    .carousel-container .owl-carousel .item-body .btn-outline-light {
+        font-size: 15px;
+    }
+    .about-paragraph {
+        margin-top: 1rem;
+    }
+
+    .no-border {
+        margin-bottom: 1rem;
+    }
+
+    .org-structure .org-img {
+        position: relative;
+        padding-left: 50px;
+    }
+
+    .vision-card {
+        margin-bottom: 1rem;
+        min-height: 100px;
+    }
+    #choose-us .card4 .fa{
+        font-size: 35px;
+        margin-left: 100px;
+        color: forestgreen;
+    }
+    
+    #choose-us .card6 .fa{
+        font-size: 35px;
+        margin-left: 140px;
+        color: forestgreen;
+    }
+}
+
+@media (min-width:576px) {
+    #services .transform-on-hover:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+    } 
+
+}
 
 
 
