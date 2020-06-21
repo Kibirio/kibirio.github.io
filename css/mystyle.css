@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 
-
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
 
 
 h1 {
@@ -74,7 +78,6 @@ html, body {
     text-align: center;
     top: 35%;
     bottom: auto;
-    /* z-index: 3; */
 }
 .item-body h3{
     font-size: 70px;
@@ -86,7 +89,7 @@ html, body {
     font-size: 35px; 
     font-weight: bold;
     margin: 0;
-    color: forestgreen;
+    color: deepskyblue;
 }
 .owl-carousel, .item {
     height: 87vh;
@@ -103,15 +106,6 @@ html, body {
     color: deepskyblue;
 }
 #home img {
-    opacity: 0.5;
-}
-
-.overlay {
-    /* height: 100vh; */
-    width: 100vw;
-    position: absolute;
-    background: deepskyblue;
-    z-index: 1;
     opacity: 0.8;
 }
 /* carousel end */
@@ -165,41 +159,50 @@ html, body {
 .card-text {
     font-size: 1.3rem;
 }
-.blue-line {
-    width: 100%;
-    height: 3px;
-    background-color: forestgreen;
-}
-
-/* navbar nav start */
-/* .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active 
-    a:focus, .navbar-inverse .navbar-nav .active a:hover {
-    color: whitesmoke;
-    background-color: deepskyblue;
-} */
 
 .my-nav {
-    background-color: rgba(0, 0, 0, 1) !important;
+    background-color: rgba(0, 100, 0, 1) !important;
     /* background-color: rgba(34, 139, 34, 0.8);  */
     /* background-color: cornsilk; */
 }
 
 .my-nav .nav-link {
-    color: deepskyblue;
+    color: #fff;
     font-size: 18px;
 }
-.my-nav a {
-    color: deepskyblue;
+.my-nav ul li {
+    color: #fff;
     /* font-size: 1.3rem; */
     padding: 2px;
 }
 
 .my-nav .nav-link:hover {
-    color: forestgreen;
+    color: deepskyblue;
 }
 #navicon {
     color: deepskyblue;
 }
+
+#navbarSupportedContent ul li {
+    margin: 2px;
+    padding: 2px;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active, #navbarSupportedContent ul li:hover {
+    background: #2bab0d;
+    border-radius: 3px;
+}
+
+#navbarSupportedContent ul .fa {
+ margin-right: 10px;
+ color:deepskyblue;
+}
+
 /* navbar nav end */
 
 /* services start */
@@ -407,6 +410,7 @@ html, body {
     width: 20%;
     background-color: deepskyblue;
     height: 3px;
+    margin-left: 40%;
 }
 #contact span {
     color: forestgreen;
@@ -443,17 +447,17 @@ footer {
 @media screen and (min-width:700px) {
     #choose-us .card4 .fa{
         font-size: 35px;
-        margin-left: 50px;
+        margin-left: 40%;
         color: forestgreen;
     }
     
     #choose-us .card6 .fa{
         font-size: 35px;
-        margin-left: 140px;
+        margin-left: 40%;
         color: forestgreen;
     }
     .card4 {
-        height: 425px;
+        height: 440px;
         margin-bottom: 2rem;
         border-radius: 20px;
     }
@@ -463,13 +467,16 @@ footer {
         margin-bottom: 2rem;
         border-radius: 20px;
     }
+    #services .no-border {
+        height: 250px;
+    }
     .vision-card {
-        height: 365px;
+        height: 360px;
     }
-    .org-structure .org-img {
-        position: relative;
-        padding-left: 100px;
+    #services .service-section .service-title {
+        font-size: 15px;
     }
+    
 }
 
 @media screen and (max-width:1024px) {
@@ -494,26 +501,23 @@ footer {
         font-size: 35px;
         font-weight: bold;
         margin: 0;
-        color: forestgreen;
+        color: #fff;
     }
     .carousel-container .owl-carousel .item-body p {
         font-size: 18px;
+        color: #fff;
     }
 
     .carousel-container .owl-carousel .item-body .btn-outline-light {
-        font-size: 15px;
+        display: none;
     }
     .about-paragraph {
         margin-top: 1rem;
     }
 
-    .no-border {
+    #services .no-border {
         margin-bottom: 1rem;
-    }
-
-    .org-structure .org-img {
-        position: relative;
-        padding-left: 50px;
+        height: 100px;
     }
 
     .vision-card {
@@ -522,13 +526,13 @@ footer {
     }
     #choose-us .card4 .fa{
         font-size: 35px;
-        margin-left: 100px;
+        margin-left: 40%;
         color: forestgreen;
     }
     
     #choose-us .card6 .fa{
         font-size: 35px;
-        margin-left: 140px;
+        margin-left: 40%;
         color: forestgreen;
     }
 }
