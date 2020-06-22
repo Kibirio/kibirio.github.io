@@ -10,7 +10,7 @@ $('.cf a').on('click', function(event) {
             {
                 scrollTop: $(hash).offset().top
             },
-            600,
+            100,
             function() {
                 window.location.hash = hash;
             }

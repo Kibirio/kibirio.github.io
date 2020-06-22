@@ -21,7 +21,7 @@
         var options = {
             whatsapp: "+254708143132", // WhatsApp number
             call_to_action: "Chat With Us", // Call to action
-            position: "right", // Position may be 'right' or 'left'
+            position: "left", // Position may be 'right' or 'left'
         };
         var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
         var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
@@ -564,19 +564,40 @@
                     </h5>
                 </div>          
             </div>
+            <hr>
+
+            <div id="newsletter" class="row container">
+                <div class="col-md-12">
+                    <h5 class="text-center">Stay connected with us. Join the newsletter to receive fresh info.</h5>
+                        <form class="form-inline" action="#" method="POST">
+                            <label for="inlineFormInputName" class="sr-only">Name</label>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName" placeholder="Your name">
+                            <label for="username" class="sr-only">email</label>
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                </div>
+                                <input type="email" class="form-control" id="username" placeholder="Your email">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2">Join now!</button>
+                        </form>
+                </div>
+                
+            </div>
         </div>
     </section>
 
 
     <!-- Footer -->
     <footer class="pt-3 pb-2">
+        
         <div class="row">
             <div class="col-md-4">
                 <div class="media">
                     <div class="footer-media mr-3"><i class="fa fa-map-marker"></i></div>
                     <div class="media-body">
                         <h5 class="mt-0">Address</h5>
-                        <p>P.O Box 55906-00200 <br> Nairobi</p> 
+                        <p>P.O Box 55906-00200, <br> Nairobi.</p> 
                     </div>
                 </div>
             </div>
@@ -590,7 +611,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="col-md-4">
                 <div class="media">
                     <div class="media-body">
@@ -601,14 +622,20 @@
                     </div>
                 </div>
             </div>
+            <div class="up-btn cf mb-5">
+                <a class="nav-link fa fa-chevron-up" href="#home"></a>
+            </div>
         </div>
+        
         <hr>
-       
-            <div class="footer-bottom text-center">
+        
+        
+            <div class="text-center footer-bottom"> 
                 Copyright &copy; Eldevan Services 2020 | 
                 website made with <span class="fa fa-heart"></span>
                 by ruiruharrison047@gmail.com
             </div>
+            
     </footer>
 <!-- footer end     -->
     

@@ -93,7 +93,6 @@ html, body {
 }
 .owl-carousel, .item {
     height: 87vh;
-    z-index: 3;
 }
 .carousel-container{
     margin-top: 4.3rem;
@@ -106,7 +105,7 @@ html, body {
     color: deepskyblue;
 }
 #home img {
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
 /* carousel end */
 
@@ -212,7 +211,7 @@ html, body {
 
 #services .card {
     margin-bottom: 1rem;
-    min-height: 307px;
+    min-height: 350px;
 }
 /* services end */
 
@@ -424,8 +423,9 @@ html, body {
  /* contact end */
 
 footer {
-    background-color: rgba(34, 139, 34, 0.8); 
-    color: #191919;
+    /* background-color: rgba(34, 139, 34, 0.8);  */
+    background-color: #191919;
+    color: #fff;
 }
 .footer-media {
     color: deepskyblue;
@@ -443,6 +443,49 @@ footer {
     color: deepskyblue;
 }
 
+/* newsletter */
+
+#newsletter form {
+    padding: 1em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    margin-left: 25%;
+}
+
+/* up btn start */
+footer .up-btn {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: forestgreen;
+    right: 0.5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+}
+
+footer .up-btn .fa {
+    color: deepskyblue;
+    font-size: 1.5rem;
+    margin: -3px;
+    /* position: relative; */
+}
+
+/* .up-btn animation */
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.9);
+    }
+    70%{
+        box-shadow: 0 0 0 2rem rgba(0, 191, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.9);
+    }
+}
+
+/* up btn end */
+
 /* media queries */
 @media screen and (min-width:700px) {
     #choose-us .card4 .fa{
@@ -456,19 +499,20 @@ footer {
         margin-left: 40%;
         color: forestgreen;
     }
-    .card4 {
-        height: 440px;
+    #choose-us .card4 {
+        height: 350px;
         margin-bottom: 2rem;
         border-radius: 20px;
+        overflow: auto;
     }
 
-    .card6 {
+    #choose-us .card6 {
         height: 300px;
         margin-bottom: 2rem;
         border-radius: 20px;
     }
     #services .no-border {
-        height: 250px;
+        height: 267px;
     }
     .vision-card {
         height: 360px;
@@ -476,10 +520,45 @@ footer {
     #services .service-section .service-title {
         font-size: 15px;
     }
+
+    .item-body {
+        position: absolute;
+        bottom: 35px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 50%;
+        bottom: auto;
+    }
+    .item-body h3{
+        font-size: 70px;
+        font-weight: bold;
+        margin: 0;
+        color: forestgreen;
+    } 
+    .item-body p {
+        font-size: 35px; 
+        font-weight: bold;
+        margin: 0;
+        color: deepskyblue;
+    }
+    .owl-carousel, .item {
+        height: 87vh;
+    }
+    .carousel-container{
+        margin-top: 4.3rem;
+    }
+    .item {
+        width: 100;
+    }
+
+    .carousel-container .item img{
+        height: 87vh;
+    }
     
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:576px) {
     
     .carousel-container .item img{
         height: 50vh;
@@ -517,7 +596,7 @@ footer {
 
     #services .no-border {
         margin-bottom: 1rem;
-        height: 100px;
+        min-height: 100px;
     }
 
     .vision-card {
