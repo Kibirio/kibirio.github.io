@@ -566,28 +566,43 @@
             </div>
             <hr>
 
-            <div id="newsletter" class="row container">
-                <div class="col-md-12">
-                    <h5 class="text-center">Stay connected with us. Join the newsletter to receive fresh info.</h5>
-                        <form class="form-inline" action="#" method="POST">
-                            <label for="inlineFormInputName" class="sr-only">Name</label>
-                            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName" placeholder="Your name">
-                            <label for="username" class="sr-only">email</label>
-                            <div class="input-group mb-2 mr-sm-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">@</div>
-                                </div>
-                                <input type="email" class="form-control" id="username" placeholder="Your email">
-                            </div>
-                            <button type="submit" class="btn btn-primary mb-2">Join now!</button>
-                        </form>
-                </div>
-                
+            
+
+            
+            <!-- php handling the newsletter form start -->
+            
+
+
+
+<!-- php handling the newsletter form end -->    
+
+            <!-- Newsletter start -->
+            <div class="newsletter">
+                <div class="container">
+                    <div class="newsletter-heading text-center">
+                        <h4>Stay connected with us. Join the newsletter to receive fresh info.</h4>
+                    </div>
+                    <form action="index.php" method="post">
+                        <div class="form-input">
+                            <input type="text" class="text-input" name="first_name" placeholder="first name"/>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" class="text-input" name="last_name" placeholder="last name"/>
+                        </div>
+                        <div class="form-input">
+                            <input type="email" name="email" class="text-input" placeholder="email"/>
+                        </div>
+                        <input type="submit" name="submit" class=" join-btn " value="Join Now"></input>
+                    </form>
+                </div>    
             </div>
+            
+
+            <!-- Newsletter end -->
+
         </div>
     </section>
-
-
+    
     <!-- Footer -->
     <footer class="pt-3 pb-2">
         
@@ -631,9 +646,9 @@
         
         
             <div class="text-center footer-bottom"> 
-                Copyright &copy; Eldevan Services 2020 | 
-                website made with <span class="fa fa-heart"></span>
-                by ruiruharrison047@gmail.com
+                Copyright &copy; Eldevan Services 2020 
+                <!-- website made with <span class="fa fa-heart"></span>
+                by ruiruharrison047@gmail.com -->
             </div>
             
     </footer>

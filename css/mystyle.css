@@ -8,7 +8,62 @@
     /* box-sizing: border-box; */
 }
 
+form {
+    width: 70%;
+    margin: 0 auto;
+    margin-left: 25%;
+}
 
+#contact .form-input {
+        width: 80%;
+        padding: 0.5rem;
+        margin-bottom: 1px;
+        border: none;
+ }
+
+ #contact h4 {
+     text-align: center;
+ }
+
+.text-input {
+    height: 2.5rem;
+    width: 70%;
+    outline-color: forestgreen;
+}
+
+#contact .newsletter .form-input {
+    max-width: 100%;
+    padding: 0.3rem;
+    margin-bottom: 5px;
+    border: none;
+    outline-color: forestgreen;
+}
+
+
+input[type="submit"] {
+    width: 56%;
+    background-color: #2bab0d;
+    color: #191919;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 1rem 1rem;
+    margin-top: 5px;
+    border: none;
+}
+
+input[value="Join Now"] {
+    color: #191919;
+}
+
+
+button[type="submit"]:hover{
+    color: #fff;
+    background-color: forestgreen;
+}
+
+.error {
+    color: red;
+}
 h1 {
     color: forestgreen;
     text-align: center;
@@ -112,7 +167,7 @@ html, body {
 /* vision & mission section */
 .vision-heading {
     font-size: 28px;
-    color: forestgreen;
+    color: #2bab0d;
     text-align: center;
 }
 #services .card {
@@ -251,7 +306,7 @@ html, body {
 
 .best-heading {
     font-size: 28px;
-    color: forestgreen;
+    color: #2bab0d;;
     text-align: center;
 }
 
@@ -282,7 +337,7 @@ html, body {
 .management-heading {
     font-size: 28px;
     text-align: center;
-    color: forestgreen;
+    color: #2bab0d;;
 }
 
 .management-paragraph {
@@ -298,9 +353,6 @@ html, body {
 /* Management end */
 
 /* Organization structure start */
- .org-img{
-    padding-left: 29%;
-}
 .org-heading {
     font-size: 28px;
     color: forestgreen;
@@ -310,7 +362,7 @@ html, body {
 /* Our people start */
 .our-people-heading {
     font-size: 28px;
-    color: forestgreen;
+    color: #2bab0d;;
     text-align: center;
 }
 
@@ -345,7 +397,7 @@ html, body {
 .about-heading {
     font-size: 28px;
     text-align: center;
-    color: forestgreen;
+    color: #2bab0d;;
 }
 .about-paragraph {
     color: #767676;
@@ -376,7 +428,7 @@ html, body {
 .history-heading {
     font-size: 28px;
     text-align: center;
-    color: forestgreen;
+    color: #2bab0d;;
 }
 
 .history-paragraph {
@@ -418,7 +470,16 @@ html, body {
     color: forestgreen;
 }
 #contact {
-    background-color: rgba(0, 191, 255, 0.7);
+    /* background-color: rgba(0, 191, 255, 0.7); */
+    /* background-color: #221e3f; */
+    background-color: deepskyblue;
+}
+
+#contact h5, h4 {
+    color: #fff;
+}
+#contact .newsletter h4 {
+    color: #221e3f;
 }
  /* contact end */
 
@@ -444,14 +505,16 @@ footer {
 }
 
 /* newsletter */
-
 #newsletter form {
     padding: 1em;
     margin-top: 2em;
     margin-bottom: 1.5em;
-    margin-left: 25%;
+    margin-left: 35%;
 }
 
+#newsletter h5 {
+    margin-left: 25%;
+}
 /* up btn start */
 footer .up-btn {
     position: absolute;
@@ -559,7 +622,34 @@ footer .up-btn .fa {
 }
 
 @media screen and (max-width:576px) {
-    
+    input[type="submit"] {
+        width: 100%;
+        background-color: #2bab0d;
+        color: #191919;
+        font-size: 18px;
+        font-weight: bold;
+        /* padding: 1rem 2rem; */
+        margin-top: 5px;
+        padding: 0.5rem;
+    }
+    #contact .form-input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1px;
+        border: none;
+        outline-color: forestgreen;
+ }
+
+    #contact .text-input {
+        width: 100%;
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+        margin-left: 17%;
+    }
+
     .carousel-container .item img{
         height: 50vh;
     }
