@@ -153,9 +153,6 @@ html {
 .carousel-container{
     margin-top: 4.3rem;
 }
-.item {
-    width: 100;
-}
 
 #home .btn-outline-light {
     color: deepskyblue;
@@ -656,6 +653,11 @@ footer .up-btn .fa {
     .carousel-container .item img{
         height: 50vh;
     }
+
+    .carousel-container .item  {
+        background-color: transparent;
+        height: 50vh;
+    }
     .carousel-container .owl-carousel{
         height: 50vh;
     }
@@ -665,7 +667,7 @@ footer .up-btn .fa {
         left: 0;
         right: 0;
         text-align: center;
-        top: 25%;
+        top: 45%;
         bottom: auto;
     }
 
@@ -673,11 +675,12 @@ footer .up-btn .fa {
         font-size: 35px;
         font-weight: bold;
         margin: 0;
-        color: #fff;
+        color: deepskyblue;
     }
     .carousel-container .owl-carousel .item-body p {
         font-size: 18px;
-        color: #fff;
+        font-weight: bold;
+        color:whitesmoke;
     }
 
     .carousel-container .owl-carousel .item-body .btn-outline-light {
